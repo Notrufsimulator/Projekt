@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zeitrechner</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+<h1>Zeitrechner</h1>
+</header>
+
+<div class="container">
+
+<div class="card">
+
+<label>Uhrzeit eingeben:</label>
+
+<input type="time" id="timeInput">
+
+<select id="direction">
+
+<option value="deToUs">
+Deutschland → Kalifornien
+</option>
+
+<option value="usToDe">
+Kalifornien → Deutschland
+</option>
+
+</select>
+
+<button onclick="convertTime()">
+Umrechnen
+</button>
+
+<h2 id="result">--:--</h2>
+
+</div>
+
+<a href="index.html">
+<button>Zurück</button>
+</a>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
