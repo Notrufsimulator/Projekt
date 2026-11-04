@@ -1,43 +1,86 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Wörterbuch</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Übersetzer</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<header>
-<h1>Wörterbuch</h1>
-</header>
+    <header>
+        <h1>🌍 Übersetzer</h1>
+    </header>
 
-<div class="container">
+    <div class="container">
 
-<div class="card">
+        <div class="card">
 
-<input
-id="wordInput"
-type="text"
-placeholder="Wort eingeben">
+            <h2>Text übersetzen</h2>
 
-<button onclick="translateWord()">
-Übersetzen
-</button>
+            <br>
 
-<h2 id="translation">
--
-</h2>
+            <label>Ausgangssprache</label>
 
-</div>
+            <select id="sourceLanguage">
+                <option value="auto">Automatisch erkennen</option>
+                <option value="de">Deutsch</option>
+                <option value="en">Englisch</option>
+                <option value="fr">Französisch</option>
+                <option value="es">Spanisch</option>
+                <option value="it">Italienisch</option>
+                <option value="nl">Niederländisch</option>
+                <option value="pt">Portugiesisch</option>
+            </select>
 
-<a href="index.html">
-<button>Zurück</button>
-</a>
+            <br>
 
-</div>
+            <label>Zielsprache</label>
 
-<script src="script.js"></script>
+            <select id="targetLanguage">
+                <option value="en">Englisch</option>
+                <option value="de">Deutsch</option>
+                <option value="fr">Französisch</option>
+                <option value="es">Spanisch</option>
+                <option value="it">Italienisch</option>
+                <option value="nl">Niederländisch</option>
+                <option value="pt">Portugiesisch</option>
+            </select>
+
+            <br>
+
+            <textarea id="wordInput"
+                placeholder="Hier Text eingeben..."
+                rows="8"></textarea>
+
+            <br>
+
+            <button onclick="translateWord()">
+                Übersetzen
+            </button>
+
+            <div id="loading"></div>
+
+            <div id="translation">
+                Hier erscheint die Übersetzung.
+            </div>
+
+        </div>
+
+        <br>
+
+        <a href="index.html">
+            <button>
+                Zurück zur Startseite
+            </button>
+        </a>
+
+    </div>
+
+    <script src="script.js"></script>
 
 </body>
+
 </html>
